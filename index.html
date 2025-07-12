@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Лавка рогаток</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- ШАПКА -->
+  <header class="site-header">
+    <h1 class="site-title">Лавка рогаток</h1>
+    <nav>
+      <ul class="nav">
+        <li><a href="#main" class="tab-btn active">Главная</a></li>
+        <li><a href="#catalog" class="tab-btn">Каталог</a></li>
+        <li><a href="#about" class="tab-btn">О нас</a></li>
+        <li><a href="#cart" class="tab-btn">Корзина</a></li>
+        <li><a href="#contacts" class="tab-btn">Контакты</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- СЕКЦИИ -->
+  <main>
+    <!-- Главная -->
+    <section id="main" class="tab-content active">
+      <div class="main-block">
+        <div class="main-text">
+          <h2>Рогатки своими руками создаются именно для тебя</h2>
+        </div>
+        <img src="https://uploads.onecompiler.io/43n9hghfn/43qdxmvvs/%D0%91%D0%B5%D0%B7%20%D0%BD%D0%B0%D0%B7%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F%20(1).jpeg" alt="Фото 1">
+      </div>
+      <div class="main-block">
+        <img src="https://uploads.onecompiler.io/43n9hghfn/43qdxmvvs/%D0%BF%D0%B5%D1%86%D0%BA%D1%8B%D0%BF%D0%BA.jpeg" alt="Фото 2">
+        <div class="main-text">
+          <h2>Твоя рогатка мечты будет сделана для тебя</h2>
+        </div>
+      </div>
+    </section>
+
+    <!-- Каталог -->
+    <section id="catalog" class="tab-content">
+      <div class="catalog">
+        <div class="product-card" onclick="openModal(0)">
+          <img src="https://uploads.onecompiler.io/43n9hghfn/43qdxmvvs/%D0%BF%D0%B5%D1%86%D0%BA%D1%8B%D0%BF%D0%BA.jpeg" alt="Товар 1">
+          <p>Рогатка из Осины</p>
+        </div>
+        <div class="product-card" onclick="openModal(1)">
+          <img src="https://uploads.onecompiler.io/43n9hghfn/43qdxmvvs/%D0%BF%D0%B5%D1%86%D0%BA%D1%8B%D0%BF%D0%BA.jpeg" alt="Товар 2">
+          <p>Рогатка из Липы</p>
+        </div>
+        <div class="product-card" onclick="openModal(2)">
+          <img src="https://uploads.onecompiler.io/43n9hghfn/43qdxmvvs/images.jpeg" alt="Товар 3">
+          <p>Рогатка из Дуба</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- О нас -->
+    <section id="about" class="tab-content">
+      <div class="about-block">
+        <div class="about-text">
+          <p>Если вы не поняли то такого магзина не существует, хех</p>
+        </div>
+        <img src="https://uploads.onecompiler.io/43n9hghfn/43qdxmvvs/cd782ccd-57c1-41cb-8ebb-528525853590%20(1).jpg" alt="Фото о нас">
+      </div>
+    </section>
+
+    <!-- Корзина -->
+    <section id="cart" class="tab-content">
+      <h2>Корзина</h2>
+      <p id="cart-empty">Пока пусто</p>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contacts" class="tab-content">
+      <h2>Контакты</h2>
+      <p>Здесь будет контактная информация, когда это будет настоящий магазин ;)</p>
+    </section>
+  </main>
+
+  <!-- МОДАЛЬНОЕ ОКНО ДЛЯ ТОВАРА -->
+  <div class="modal" id="productModal">
+    <span class="modal-close" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+      <img id="modalImage" src="" alt="Подробности">
+      <h3 id="modalTitle"></h3>
+      <p id="modalDescription"></p>
+      <button onclick="addToCart()">Добавить в корзину</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
